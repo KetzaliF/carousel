@@ -2,7 +2,7 @@
 
 Creating a carousel with buttons and autoplay.
 
-![Gif del proyecto](-)
+![Gif del proyecto](https://github.com/KetzaliF/carousel/blob/main/assets/carousel.gif)
 
 ## Development Tools 🛠️
 
