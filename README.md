@@ -14,5 +14,5 @@ Creating a carousel with buttons and autoplay.
 ## Deployment
 You can visit de project with this link:
 
-* [GitHub Pages](-).
+* [GitHub Pages](https://ketzalif.github.io/carousel/).
 
