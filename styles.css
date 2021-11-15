@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&display=swap');
+
+:root {
+   --color-active: #B722EC;
+   --white: #FFFFFF;
+   --black: #000000;
+   --bg-color: #121825;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   height: 100vh;
+   width: 100%;
+   background-color: var(--bg-color);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.slider {
+   position: relative;
+   width: 90%;
+   height: 500px;
+   max-width: 800px;
+   background-color: var(--bg-color);
+   overflow: hidden;
+   border-radius: 24px;
+}
+
+.slide {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   clip-path: circle(0.0% at 0 0);
+}
+
+.slide.active {
+   clip-path: circle(140.9% at 0 0);
+   transition: 1s;
+} 
+
+.slide__img {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: left;
+}
+
+.img-canada{
+   object-position: right;
+}
+
+.img-findland{
+   object-position: 60%;
+}
+
+.slide__info {
+   position: absolute;
+   background-color: rgba(255, 255, 255, .3);
+   backdrop-filter: blur(4px);
+   width: 85%;
+   max-width: 612px;
+   margin: 30px 0 0 30px;
+   padding: 12px;
+   border-radius: 8px;
+   font-family: 'Mulish', sans-serif;
+}
+
+.slide__info-title {
+   font-style: 2em;
+   font-weight: 800;
+   text-transform: uppercase;
+   margin-bottom: 8px;
+}
+
+.slide__info-pharagrap {
+   font-size: 1em;
+   font-weight: 600;
+}
+
+.slider__navigation {
+   display: flex;
+   margin-top: -20px;
+   z-index: 1;
+}
+
+.prev-btn,
+.next-btn {
+   background-color: var(--white);
+   font-size: 1.5em;
+   padding: 8px 13px;
+   cursor: pointer;
+   transition: all 0.5s;
+}
+
+.prev-btn {
+   border-radius: 10px 0 0 10px;
+}
+
+.next-btn {
+   border-radius: 0 10px 10px 0;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+   background-color: var(--color-active);
+   color: var(--white);
+}
+
+.slider__navigation-visibility {
+   width: 160px;
+   display: flex;
+   justify-content: space-between;
+   margin-top: 28px;
+}
+
+.slide-icon {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background-color: var(--white);
+}
+
+.slide-icon.active {
+   background-color: var(--color-active);
+}
+
+.footer {
+   position: absolute;
+   bottom: 30px;
+   text-align: center;
+}
+
+.footer__credits {
+   font-size: 1em;
+   font-weight: 400;
+   color: var(--white);
+}
+
+.footer__credits-link {
+   color: var(--color-active);
+   text-decoration: none;
+}
+
+@media screen and (max-width: 400px) {
+   .slider{
+      height: 400px;
+   }
+
+   .footer{
+      padding: 0 24px;
+      font-size: 0.87em;
+   }
+}
